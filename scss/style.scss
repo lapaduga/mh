@@ -1,0 +1,66 @@
+// Technical files
+@import "_nullstyle";
+
+// Common styles
+:root{
+	// Variables
+	--gold: #e8cc56;
+	--blue: #192954;
+	--milk: #f1efe1;
+	// Properties
+	scrollbar-width: thin;
+	scrollbar-color: var(--blue) #fff;
+	&::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+	}
+	&::-webkit-scrollbar-track {
+		background: #fff;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: var(--blue);
+		@media (any-hover: hover) {
+			&:hover {
+				background: #21346b;
+			}
+		}
+	}
+}
+body{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 100;
+	text-align: justify;
+	color: #fff;
+	font-size: 16px;
+	background: var(--blue);
+	&._lock {
+		overflow: hidden;
+	}
+}
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.main{
+	flex: 1 1 auto;
+	font-size: 40px;
+	padding-top: 300px;
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+.test{
+	text-align: center;
+	img{
+		display: inline-block;
+		width: 100%;
+		max-width: 400px;
+		margin-bottom: 30px;
+	}
+}
+
+// Components
+@import "_header";
