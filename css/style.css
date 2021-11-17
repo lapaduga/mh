@@ -170,6 +170,25 @@ body._lock {
   width: 100%;
   z-index: 10;
   padding: 20px;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.header._hide {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.header._paint {
+  background-color: var(--blue);
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 10px 20px;
+  }
 }
 
 .header__body {
@@ -186,14 +205,72 @@ body._lock {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 80px;
           flex: 0 0 80px;
+  position: relative;
+  z-index: 5;
 }
 
 .header__logo img {
   max-width: 100%;
 }
 
+@media (max-width: 1024px) {
+  .header__logo {
+    width: 50px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50px;
+            flex: 0 0 50px;
+  }
+}
+
 .header__burger {
   display: none;
+}
+
+@media (max-width: 1024px) {
+  .header__burger {
+    display: block;
+    z-index: 5;
+    position: relative;
+    width: 30px;
+    height: 18px;
+  }
+  .header__burger span, .header__burger:before, .header__burger:after {
+    position: absolute;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    background-color: #fff;
+  }
+  .header__burger:before, .header__burger:after {
+    content: "";
+  }
+  .header__burger:before {
+    top: 0;
+  }
+  .header__burger:after {
+    bottom: 0;
+  }
+  .header__burger span {
+    top: 50%;
+    -webkit-transform: scaleX(1) translate(0, -50%);
+            transform: scaleX(1) translate(0, -50%);
+  }
+  .header__burger._active span {
+    -webkit-transform: scaleX(0) translate(0, -50%);
+            transform: scaleX(0) translate(0, -50%);
+  }
+  .header__burger._active:before {
+    top: 50%;
+    -webkit-transform: rotate(-45deg) translate(0, -70%);
+            transform: rotate(-45deg) translate(0, -70%);
+  }
+  .header__burger._active:after {
+    bottom: 50%;
+    -webkit-transform: rotate(45deg) translate(0, 70%);
+            transform: rotate(45deg) translate(0, 70%);
+  }
 }
 
 .menu {
@@ -209,6 +286,52 @@ body._lock {
   margin-right: 80px;
 }
 
+@media (max-width: 1024px) {
+  .menu {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .menu__body {
+    overflow: auto;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(25, 41, 84, 0.95);
+    padding: 100px 20px 40px 20px;
+    -webkit-transition: right 0.3s ease 0s;
+    transition: right 0.3s ease 0s;
+  }
+  .menu__body:before {
+    content: "";
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background: var(--blue);
+    -webkit-transition: -webkit-transform 0.3s ease 0s;
+    transition: -webkit-transform 0.3s ease 0s;
+    transition: transform 0.3s ease 0s;
+    transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+  }
+  .menu__body._active {
+    right: 0;
+  }
+  .menu__body._active:before {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
 .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -220,7 +343,7 @@ body._lock {
   position: relative;
 }
 
-@media (any-hover: hover) {
+@media (min-width: 1025px) {
   .menu__list > li:hover .menu__sub-list {
     opacity: 1;
     visibility: visible;
@@ -234,7 +357,35 @@ body._lock {
   }
 }
 
+@media (max-width: 1024px) {
+  .menu__list > li._active .menu__sub-list {
+    display: block;
+  }
+  .menu__list > li._active .menu__arrow {
+    -webkit-transform: translate(-100%, 0) rotate(180deg);
+            transform: translate(-100%, 0) rotate(180deg);
+  }
+}
+
+@media (max-width: 1024px) {
+  .menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .menu__list > li:not(:last-child) {
+    margin: 0px 0px 30px 0px;
+  }
+}
+
 .menu__link {
+  font-weight: 800;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -246,9 +397,14 @@ body._lock {
   transition: color 0.3s ease 0s;
 }
 
-@media (any-hover: hover) {
-  .menu__link:hover {
-    color: var(--gold);
+.menu__link:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 1024px) {
+  .menu__link {
+    font-size: 24px;
+    padding: 10px 0 15px 0;
   }
 }
 
@@ -267,6 +423,19 @@ body._lock {
   transition: all 0.3s ease 0s;
 }
 
+@media (max-width: 1024px) {
+  .menu__arrow {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fff;
+    -webkit-transform: translate(-100%, 0) rotate(0deg);
+            transform: translate(-100%, 0) rotate(0deg);
+    left: 100%;
+    bottom: unset;
+    top: 30px;
+  }
+}
+
 .menu__sub-list {
   position: absolute;
   top: 100%;
@@ -274,6 +443,7 @@ body._lock {
   -webkit-transform: translate(-50%, 50px);
           transform: translate(-50%, 50px);
   background-color: #fff;
+  border-radius: 5px;
   padding: 10px 0;
   min-width: 200px;
   opacity: 0;
@@ -281,6 +451,23 @@ body._lock {
   pointer-events: none;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+@media (max-width: 1024px) {
+  .menu__sub-list {
+    display: none;
+    position: relative;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
 }
 
 .menu__sub-link {
@@ -296,5 +483,11 @@ body._lock {
 @media (any-hover: hover) {
   .menu__sub-link:hover {
     background-color: #dfe7ff;
+  }
+}
+
+@media (max-width: 1024px) {
+  .menu__sub-link {
+    font-size: 20px;
   }
 }
