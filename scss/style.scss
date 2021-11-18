@@ -10,7 +10,7 @@
 	--purple: #5928e5;
 	// Properties
 	scrollbar-width: thin;
-	scrollbar-color: var(--blue) #fff;
+	scrollbar-color: var(--purple) #fff;
 	&::-webkit-scrollbar {
 		width: 8px;
 		height: 8px;
@@ -19,21 +19,18 @@
 		background: #fff;
 	}
 	&::-webkit-scrollbar-thumb {
-		background: var(--blue);
+		background: var(--purple);
 		@media (any-hover: hover) {
 			&:hover {
-				background: #21346b;
+				background: #6c3eeb;
 			}
 		}
 	}
 }
 body{
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 300;
-	text-align: justify;
-	color: #fff;
 	font-size: 16px;
-	background: var(--blue);
 	&._lock {
 		overflow: hidden;
 	}
@@ -45,23 +42,77 @@ body{
 }
 .main{
 	flex: 1 1 auto;
-	font-size: 40px;
-	padding-top: 300px;
 }
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 20px;
 }
-.test{
-	text-align: center;
-	img{
-		display: inline-block;
-		width: 100%;
-		max-width: 400px;
-		margin-bottom: 30px;
+.title {
+	color: #fff;
+	font-size: 100px;
+	line-height: 100%;
+	font-weight: 900;
+	letter-spacing: -0.2rem;
+	line-height: .85em;
+	@media (max-width:1024px) {
+		font-size: 70px;
+	}
+	@media (max-width:767px) {
+		font-size: 50px;
+		line-height: 130%;
+		letter-spacing: 0;
+	}
+	@media (max-width:500px) {
+		font-size: 40px;
+	}
+	@media (max-width:375px) {
+		font-size: 30px;
+	}
+}
+.subtitle {
+	max-width: 600px;
+    color: var(--purple);
+    font-size: 40px;
+    line-height: .9em;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+	margin: 20px 0;
+	text-transform: uppercase;
+}
+.text {
+	font-size: 18px;
+    line-height: 27px;
+    font-weight: 300;
+	display: flex;
+	justify-content: flex-end;
+	padding: 50px 0px;
+	p{
+		max-width: 600px;
+	}
+}
+.btn {
+	padding: 20px 40px;
+	background-color: transparent;
+	border: 1px solid transparent;
+	color: var(--blue);
+	font-weight: 800;
+	display: inline-block;
+	transition: all 0.3s ease 0s;
+}
+.btn--white {
+	background-color: #fff;
+	@media (any-hover: hover) {
+		&:hover {
+			color: #fff;
+			background-color: transparent;
+			border: 1px solid #fff;
+		}
 	}
 }
 
 // Components
 @import "_header";
+@import "_mainscreen";
+@import "_block";
+

@@ -1,0 +1,45 @@
+.mainscreen {
+	padding-top: 200px;
+	background: var(--purple);
+	min-height: 100vh;
+	padding-bottom: 100px;
+	@media (max-width:767px) {
+		padding-top: 100px;
+	}
+	&__body {
+		text-align: center;
+	}
+
+	&__title{
+		margin-bottom: 50px;
+		text-transform: uppercase;
+		@media (max-width:767px) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__text {
+		color: #fff;
+		line-height: 200%;
+		font-weight: 500;
+		max-width: 800px;
+		margin: 0 auto 50px auto;
+		@media (max-width:767px) {
+			margin: 0 auto 30px auto;
+		}
+	}
+
+	&__btn {
+		margin-bottom: 50px;
+	}
+
+	&__image{
+		text-align: center;
+		img{
+			width: 100%;
+			max-width: 500px;
+		}
+	}
+}
+
+

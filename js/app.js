@@ -46,3 +46,48 @@ window.addEventListener('scroll', () => {
 	lastScroll = scrollPosition();
 });
 //#endregion
+
+//#region Параллакс на главном экране
+"use strict"
+window.onload = () => {
+	const parallax = document.querySelector('.block--first');
+
+	if (document.body.clientWidth > 992) {
+		if (parallax) {
+			const pic = document.querySelector('.block__image');
+			const ratio = 50;
+			const speed = 0.02;
+
+			let positionX = 0;
+			let positionY = 0;
+			let coordXPercent = 0;
+			let coordYPercent = 0;
+
+			function setMouseParallaxStyle() {
+				const distX = coordXPercent - positionX;
+				const distY = coordYPercent - positionY;
+
+				positionX += (distX * speed);
+				positionY += (distY * speed);
+
+				pic.style.cssText = `transform: translate(${positionX / ratio}%,${positionY / ratio}%);`;
+
+				requestAnimationFrame(setMouseParallaxStyle);
+			}
+			setMouseParallaxStyle();
+
+			parallax.addEventListener('mousemove', (e) => {
+				const parallaxWidth = pic.offsetWidth;
+				const parallaxHeight = pic.offsetHeight;
+
+				const coordX = e.pageX - parallaxWidth / 2;
+				const coordY = e.pageY - parallaxHeight / 2;
+
+				coordXPercent = coordX / parallaxWidth * 100;
+				coordYPercent = coordY / parallaxHeight * 100;
+			});
+		}
+	}
+}
+//#endregion
+
