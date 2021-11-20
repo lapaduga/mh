@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'socials';
+  src:
+    url('../fonts/socials.ttf?3ay6kg') format('truetype'),
+    url('../fonts/socials.woff?3ay6kg') format('woff'),
+    url('../fonts/socials.svg?3ay6kg#socials') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="socials-"]::before, [class*=" socials-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'socials' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.socials-ok:before {
+  content: "\e905";
+}
+.socials-fb:before {
+  content: "\e906";
+}
+.socials-pinterest:before {
+  content: "\e907";
+}
+.socials-tiktok:before {
+  content: "\e908";
+}
+.socials-tg:before {
+  content: "\e900";
+}
+.socials-inst:before {
+  content: "\e901";
+}
+.socials-vk:before {
+  content: "\e902";
+}
+.socials-yt:before {
+  content: "\e903";
+}
+.socials-vimeo:before {
+  content: "\e904";
+}
