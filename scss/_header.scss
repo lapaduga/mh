@@ -6,7 +6,7 @@
 	z-index: 10;
 	padding: 10px 20px;
 	transform: translateY(0);
-	transition: all 0.8s ease 0s;
+	transition: all 0.6s ease 0s;
 	box-shadow: 2px 2px 2px 0 #4b1bcf80;
 	&._hide {
 		transform: translateY(-100%);

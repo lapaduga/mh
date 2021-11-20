@@ -1,5 +1,8 @@
 .block {
 	padding: 100px 0;
+	&.block--activities{
+		background: var(--purple);
+	}
 	@media (max-width:767px) {
 		padding: 50px 0;
 	}
