@@ -7,10 +7,8 @@
 	padding: 10px 20px;
 	transform: translateY(0);
 	transition: all 0.6s ease 0s;
-	box-shadow: 2px 2px 2px 0 #4b1bcf80;
 	&._hide {
 		transform: translateY(-100%);
-		box-shadow: 0px 0px 0px 0 rgba(89, 40, 229, 0.5);
 	}
 	&._paint {
 		background-color: #fff;

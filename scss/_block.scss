@@ -1,7 +1,7 @@
 .block {
 	padding: 100px 0;
 	&.block--activities{
-		background: var(--purple);
+		background-image: radial-gradient(circle, #5928e5 0%, var(--blue));
 	}
 	@media (max-width:767px) {
 		padding: 50px 0;
