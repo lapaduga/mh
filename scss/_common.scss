@@ -3,23 +3,22 @@
 	@media (max-width:767px) {
 		margin-bottom: -90px;
 	}
-	&__info {
-	}
 
 	&__heading {
 		color: var(--purple);
-		margin: 0 0 40px auto;
-		text-align: right;
+		margin: 0 auto 40px 0;
+		text-align: left;
 	}
 
 	&__text {
 		padding: 0;
-		text-align: left;
-		margin-bottom: 40px;
+		text-align: right;
+		margin: 0 0 40px auto;
 		max-width: 600px;
 	}
 
 	.video{
+		padding: 0 0 60% 0;
 		@media (max-width:767px) {
 			width: 100%;
 			margin-top: 0;

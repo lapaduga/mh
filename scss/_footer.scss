@@ -4,20 +4,12 @@
 	@media (max-width:767px) {
 		padding: 50px 0;
 	}
-	&__container {
-	}
-
-	&__body {
-	}
 
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 		gap: 20px;
 		margin-bottom: 30px;
-	}
-
-	&__item {
 	}
 
 	&__caption {

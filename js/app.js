@@ -98,6 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		const cursor = document.getElementById('cursor'),
 			aura = document.getElementById('aura'),
 			links = document.getElementsByTagName('a'),
+			buttons = document.getElementsByTagName('button'),
+			formElements = document.querySelectorAll('.form-control'),
 			videos = document.querySelectorAll('.video'),
 			body = document.body;
 
@@ -119,14 +121,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				gsap.set(cursor, {
 					css: {
-						left: mouseX,
-						top: mouseY,
+						left: mouseX - 3,
+						top: mouseY - 3,
 					}
 				});
 				gsap.set(aura, {
 					css: {
-						left: posX - 19.5,
-						top: posY - 19.5,
+						left: posX - 22,
+						top: posY - 22,
 					}
 				});
 			}
@@ -139,6 +141,30 @@ document.addEventListener('DOMContentLoaded', () => {
 				aura.classList.add('_active');
 			});
 			link.addEventListener('mouseout', () => {
+				cursor.classList.remove('_active');
+				aura.classList.remove('_active');
+			});
+		}
+
+		for (let i = 0; i < buttons.length; i++) {
+			const button = buttons[i];
+			button.addEventListener('mouseover', () => {
+				cursor.classList.add('_active');
+				aura.classList.add('_active');
+			});
+			button.addEventListener('mouseout', () => {
+				cursor.classList.remove('_active');
+				aura.classList.remove('_active');
+			});
+		}
+
+		for (let i = 0; i < formElements.length; i++) {
+			const formElement = formElements[i];
+			formElement.addEventListener('mouseover', () => {
+				cursor.classList.add('_active');
+				aura.classList.add('_active');
+			});
+			formElement.addEventListener('mouseout', () => {
 				cursor.classList.remove('_active');
 				aura.classList.remove('_active');
 			});

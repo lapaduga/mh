@@ -3,6 +3,19 @@
 	&.block--activities{
 		background-image: radial-gradient(circle, #5928e5 0%, var(--blue));
 	}
+	&.block--form {
+		background: var(--pink);
+		.heading{
+			margin-bottom: 30px;
+		}
+		.text{
+			padding: 0;
+			margin-bottom: 40px;
+			justify-content: center;
+			text-align: center;
+			font-weight: 400;
+		}
+	}
 	@media (max-width:767px) {
 		padding: 50px 0;
 	}
