@@ -176,12 +176,12 @@ h6 {
 }
 
 :root ::-moz-selection {
-  background-color: var(--green);
+  background-color: rgba(188, 255, 0, 0.8);
   color: var(--purple);
 }
 
 :root ::selection {
-  background-color: var(--green);
+  background-color: rgba(188, 255, 0, 0.8);
   color: var(--purple);
 }
 
@@ -464,6 +464,61 @@ body._lock {
 @media (max-width: 1024px) {
   .cursor-part {
     display: none !important;
+  }
+}
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid var(--purple);
+  opacity: 1;
+  border-radius: 50%;
+  -webkit-animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+          animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+
+@-webkit-keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
   }
 }
 
@@ -1552,6 +1607,12 @@ body._lock {
   max-width: 900px;
   margin: 0 auto;
   border-radius: 5px;
+  position: relative;
+}
+
+.form._sending .form__spinner {
+  opacity: 1;
+  visibility: visible;
 }
 
 @media (max-width: 767px) {
@@ -1566,13 +1627,39 @@ body._lock {
   }
 }
 
+.form__spinner {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.95);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-box-shadow: 10px 10px 50px #fff;
+          box-shadow: 10px 10px 50px #fff;
+}
+
 .form__inputs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 -10px 20px -10px;
+  margin: 0 -10px;
 }
 
 .form__input-wrap {
@@ -1607,20 +1694,21 @@ body._lock {
   padding: 15px;
   font-size: 16px;
   width: 100%;
-  -webkit-transition: -webkit-box-shadow 0.5s ease 0s;
-  transition: -webkit-box-shadow 0.5s ease 0s;
-  transition: box-shadow 0.5s ease 0s;
-  transition: box-shadow 0.5s ease 0s, -webkit-box-shadow 0.5s ease 0s;
+  -webkit-transition: border-color 0.3s ease 0s, -webkit-box-shadow 0.5s ease 0s;
+  transition: border-color 0.3s ease 0s, -webkit-box-shadow 0.5s ease 0s;
+  transition: box-shadow 0.5s ease 0s, border-color 0.3s ease 0s;
+  transition: box-shadow 0.5s ease 0s, border-color 0.3s ease 0s, -webkit-box-shadow 0.5s ease 0s;
   border-radius: 5px;
+  border: 1px solid transparent;
 }
 
 .form__input::-webkit-input-placeholder {
   color: var(--purple);
   font-weight: 600;
-  -webkit-transition: -webkit-transform 0.5s ease 0s;
-  transition: -webkit-transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+  -webkit-transition: color 0.3s ease 0s, -webkit-transform 0.5s ease 0s;
+  transition: color 0.3s ease 0s, -webkit-transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, color 0.3s ease 0s;
+  transition: transform 0.5s ease 0s, color 0.3s ease 0s, -webkit-transform 0.5s ease 0s;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
 }
@@ -1628,30 +1716,30 @@ body._lock {
 .form__input:-ms-input-placeholder {
   color: var(--purple);
   font-weight: 600;
-  -webkit-transition: -webkit-transform 0.5s ease 0s;
-  transition: -webkit-transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+  -webkit-transition: color 0.3s ease 0s, -webkit-transform 0.5s ease 0s;
+  transition: color 0.3s ease 0s, -webkit-transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, color 0.3s ease 0s;
+  transition: transform 0.5s ease 0s, color 0.3s ease 0s, -webkit-transform 0.5s ease 0s;
   transform: translate(0, 0);
 }
 
 .form__input::-ms-input-placeholder {
   color: var(--purple);
   font-weight: 600;
-  -webkit-transition: -webkit-transform 0.5s ease 0s;
-  transition: -webkit-transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+  -webkit-transition: color 0.3s ease 0s, -webkit-transform 0.5s ease 0s;
+  transition: color 0.3s ease 0s, -webkit-transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, color 0.3s ease 0s;
+  transition: transform 0.5s ease 0s, color 0.3s ease 0s, -webkit-transform 0.5s ease 0s;
   transform: translate(0, 0);
 }
 
 .form__input::placeholder {
   color: var(--purple);
   font-weight: 600;
-  -webkit-transition: -webkit-transform 0.5s ease 0s;
-  transition: -webkit-transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+  -webkit-transition: color 0.3s ease 0s, -webkit-transform 0.5s ease 0s;
+  transition: color 0.3s ease 0s, -webkit-transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, color 0.3s ease 0s;
+  transition: transform 0.5s ease 0s, color 0.3s ease 0s, -webkit-transform 0.5s ease 0s;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
 }
@@ -1679,6 +1767,49 @@ body._lock {
           transform: translate(300%, 0);
 }
 
+.form__input._error {
+  border: 1px solid red;
+  background-color: var(--pink);
+}
+
+.form__input._error::-webkit-input-placeholder {
+  color: red;
+}
+
+.form__input._error:-ms-input-placeholder {
+  color: red;
+}
+
+.form__input._error::-ms-input-placeholder {
+  color: red;
+}
+
+.form__input._error::placeholder {
+  color: red;
+}
+
+.form__alert {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 10px;
+  border: 1px solid red;
+  font-weight: 400;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  color: red;
+  background-color: var(--pink);
+}
+
+.form__alert._error {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
 .form__button-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1703,6 +1834,11 @@ body._lock {
 
 .checkbox {
   margin-bottom: 30px;
+}
+
+.checkbox._error .checkbox__label:before {
+  border: 1px solid red;
+  background-color: var(--pink);
 }
 
 .checkbox__input {
@@ -1740,6 +1876,9 @@ body._lock {
   height: 24px;
   background-color: #fff;
   border-radius: 5px;
+  border: 1px solid transparent;
+  -webkit-transition: background-color 0.3s ease 0s, border-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s, border-color 0.3s ease 0s;
 }
 
 .checkbox__label:after {

@@ -5,16 +5,42 @@
 	max-width: 900px;
 	margin: 0 auto;
 	border-radius: 5px;
-	@media (max-width:767px) {
+	position: relative;
+	&._sending{
+		.form__spinner{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	@media (max-width: 767px) {
 		padding: 40px 20px;
 	}
-	@media (max-width:500px) {
+	@media (max-width: 500px) {
 		margin: 0 -20px;
 	}
+
+	&__spinner {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 5px;
+		background: rgba(255, 255, 255, 0.95);
+		transition: all 0.3s ease 0s;
+		opacity: 0;
+		visibility: hidden;
+		box-shadow: 10px 10px 50px #fff;
+	}
+
 	&__inputs {
 		display: flex;
 		flex-wrap: wrap;
-		margin: 0 -10px 20px -10px;
+		margin: 0 -10px;
 	}
 
 	&__input-wrap {
@@ -38,12 +64,13 @@
 		padding: 15px;
 		font-size: 16px;
 		width: 100%;
-		transition: box-shadow 0.5s ease 0s;
+		transition: box-shadow 0.5s ease 0s, border-color 0.3s ease 0s;
 		border-radius: 5px;
+		border: 1px solid transparent;
 		&::placeholder {
 			color: var(--purple);
 			font-weight: 600;
-			transition: transform 0.5s ease 0s;
+			transition: transform 0.5s ease 0s, color 0.3s ease 0s;
 			transform: translate(0, 0);
 		}
 		&:focus,
@@ -55,9 +82,36 @@
 				transform: translate(300%, 0);
 			}
 		}
+		&._error {
+			border: 1px solid rgb(255, 0, 0);
+			background-color: var(--pink);
+			&::placeholder {
+				color: rgb(255, 0, 0);
+			}
+		}
 	}
 
-	&__button-wrap{
+	&__alert {
+		transition: all 0.3s ease 0s;
+		padding: 10px;
+		border-radius: 5px;
+		text-align: center;
+		margin-bottom: 10px;
+		border: 1px solid rgb(255, 0, 0);
+		font-weight: 400;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		color: rgb(255, 0, 0);
+		background-color: var(--pink);
+		&._error {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: all;
+		}
+	}
+
+	&__button-wrap {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -65,13 +119,21 @@
 
 	&__btn {
 		cursor: none;
-		@media (max-width:500px) {
+		@media (max-width: 500px) {
 			width: 100%;
 		}
 	}
 }
 .checkbox {
 	margin-bottom: 30px;
+	&._error {
+		.checkbox__label {
+			&:before {
+				border: 1px solid rgb(255, 0, 0);
+				background-color: var(--pink);
+			}
+		}
+	}
 	&__input {
 		display: none;
 		&:checked + .checkbox__label {
@@ -98,6 +160,8 @@
 			height: 24px;
 			background-color: #fff;
 			border-radius: 5px;
+			border: 1px solid transparent;
+			transition: background-color 0.3s ease 0s, border-color 0.3s ease 0s;
 		}
 		&:after {
 			content: "";
