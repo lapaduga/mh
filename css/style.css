@@ -151,6 +151,7 @@ h6 {
   --purple: #4b1bcf;
   --cyan: #0065f2;
   --pink: #ffdde5;
+  --green: #bcff00;
   scrollbar-width: thin;
   scrollbar-color: var(--purple) #fff;
 }
@@ -172,6 +173,16 @@ h6 {
   :root::-webkit-scrollbar-thumb:hover {
     background: #6c3eeb;
   }
+}
+
+:root ::-moz-selection {
+  background-color: var(--green);
+  color: var(--purple);
+}
+
+:root ::selection {
+  background-color: var(--green);
+  color: var(--purple);
 }
 
 body {

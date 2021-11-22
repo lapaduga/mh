@@ -11,6 +11,7 @@
 	--purple: #4b1bcf;
 	--cyan: #0065f2;
 	--pink: #ffdde5;
+	--green: #bcff00;
 	// Properties
 	scrollbar-width: thin;
 	scrollbar-color: var(--purple) #fff;
@@ -28,6 +29,10 @@
 				background: #6c3eeb;
 			}
 		}
+	}
+	::selection{
+		background-color: var(--green);
+		color: var(--purple);
 	}
 }
 body {
