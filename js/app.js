@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	//#endregion
 
-	//#region Валидация форм
+	//#region Обработка форм
 	const forms = document.querySelectorAll('.form');
 
 	if (forms) {

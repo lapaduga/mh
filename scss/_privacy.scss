@@ -1,0 +1,52 @@
+.privacy {
+	cursor: auto !important;
+	* {
+		cursor: auto !important;
+	}
+	&__body {
+		padding: 50px 0;
+		ul{
+			li{
+				line-height: 150%;
+				margin: 10px 0;
+				font-size: 20px;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 50px;
+		font-weight: 600;
+		margin: 50px 0;
+		@media (max-width:992px) {
+			font-size: 36px;
+			margin: 40px 0;
+		}
+		@media (max-width:767px) {
+			font-size: 30px;
+			margin: 35px 0;
+		}
+	}
+
+	&__subtitle {
+		font-weight: 400;
+		font-size: 30px;
+		margin: 30px 0;
+		@media (max-width:992px) {
+			font-size: 26px;
+			margin: 20px 0;
+		}
+		@media (max-width:767px) {
+			font-size: 22px;
+		}
+	}
+
+	&__text {
+		margin: 20px 0;
+		line-height: 150%;
+		font-size: 20px;
+		@media (max-width:992px) {
+			margin: 15px 0;
+		}
+	}
+}

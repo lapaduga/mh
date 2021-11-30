@@ -16,7 +16,7 @@ $mail->setFrom('deniskotov29042015@gmail.com', 'Денис Котов');
 // Кому отправить
 $mail->addAddress('deniskotov29042015@gmail.com');
 // Тема письма 
-$mail->Subject = 'Тестовая тема письма';
+$mail->Subject = 'New Letter!';
 
 // Тело письма
 $body = '<h1>Новая заявка на обучение</h1>';

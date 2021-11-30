@@ -1908,3 +1908,72 @@ body._lock {
     text-decoration: none;
   }
 }
+
+.privacy {
+  cursor: auto !important;
+}
+
+.privacy * {
+  cursor: auto !important;
+}
+
+.privacy__body {
+  padding: 50px 0;
+}
+
+.privacy__body ul li {
+  line-height: 150%;
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.privacy__title {
+  font-size: 50px;
+  font-weight: 600;
+  margin: 50px 0;
+}
+
+@media (max-width: 992px) {
+  .privacy__title {
+    font-size: 36px;
+    margin: 40px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .privacy__title {
+    font-size: 30px;
+    margin: 35px 0;
+  }
+}
+
+.privacy__subtitle {
+  font-weight: 400;
+  font-size: 30px;
+  margin: 30px 0;
+}
+
+@media (max-width: 992px) {
+  .privacy__subtitle {
+    font-size: 26px;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .privacy__subtitle {
+    font-size: 22px;
+  }
+}
+
+.privacy__text {
+  margin: 20px 0;
+  line-height: 150%;
+  font-size: 20px;
+}
+
+@media (max-width: 992px) {
+  .privacy__text {
+    margin: 15px 0;
+  }
+}
