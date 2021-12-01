@@ -6,7 +6,7 @@
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
-		margin: 0 -10px 40px -10px;
+		margin: 0 -10px;
 	}
 
 	&__item {
@@ -99,23 +99,5 @@
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 		height: 70px;
-	}
-
-	&__load {
-		text-align: center;
-	}
-
-	&__load-link{
-		color: var(--purple);
-		font-weight: 900;
-		text-transform: uppercase;
-		letter-spacing: 3px;
-		font-size: 20px;
-		transition: color 0.3s ease 0s;
-		@media (any-hover: hover) {
-			&:hover {
-				color: var(--gold);
-			}
-		}
 	}
 }

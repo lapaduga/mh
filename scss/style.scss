@@ -161,6 +161,23 @@ body {
 		}
 	}
 }
+.load-wrap{
+	text-align: center;
+	margin-top: 40px;
+	.load-link{
+		color: var(--purple);
+			font-weight: 900;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			font-size: 20px;
+			transition: color 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--gold);
+				}
+			}
+	}
+}
 
 // Cursor
 #cursor,
@@ -280,3 +297,4 @@ body {
 @import "_bar";
 @import "_gallery";
 @import "_album";
+@import "_masters";
