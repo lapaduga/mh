@@ -156,9 +156,8 @@ body {
 	color: var(--pink);
 	@media (any-hover: hover) {
 		&:hover {
-			background: #fff;
-			color: var(--purple);
-			border: 1px solid #fff;
+			background: var(--purple);
+			color: #fff;
 		}
 	}
 }
@@ -278,3 +277,5 @@ body {
 @import "_footer";
 @import "_form";
 @import "_privacy";
+@import "_bar";
+@import "_gallery";

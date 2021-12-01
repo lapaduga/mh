@@ -34,8 +34,8 @@
 					border: 1px solid var(--purple);
 					@media (any-hover: hover) {
 						&:hover {
-							background: #fff;
-							color: var(--purple);
+							background: var(--purple);
+							color: #fff;
 						}
 					}
 				}
