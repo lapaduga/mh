@@ -1,8 +1,7 @@
 .mainscreen {
-	padding-top: 200px;
 	background-image: radial-gradient(circle, #5928e5 0%, var(--blue));
 	min-height: 100vh;
-	padding-bottom: 100px;
+	padding: 150px 0px 50px 0px;
 	@media (max-width:767px) {
 		padding-top: 100px;
 	}
@@ -18,17 +17,6 @@
 		}
 	}
 
-	&__text {
-		color: #fff;
-		line-height: 200%;
-		font-weight: 500;
-		max-width: 800px;
-		margin: 0 auto 50px auto;
-		@media (max-width:767px) {
-			margin: 0 auto 30px auto;
-		}
-	}
-
 	&__btn {
 		margin-bottom: 50px;
 	}
@@ -37,7 +25,7 @@
 		text-align: center;
 		img{
 			width: 100%;
-			max-width: 300px;
+			max-width: 280px;
 		}
 	}
 }
