@@ -336,6 +336,7 @@ body._lock {
   -webkit-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
   font-size: 16px;
+  text-align: center;
 }
 
 .btn--white {
@@ -359,6 +360,19 @@ body._lock {
   .btn--pink:hover {
     background: var(--purple);
     color: #fff;
+  }
+}
+
+.btn--purple {
+  border: 1px solid var(--purple);
+  background: var(--purple);
+  color: #fff;
+}
+
+@media (any-hover: hover) {
+  .btn--purple:hover {
+    color: var(--purple);
+    background: #fff;
   }
 }
 
@@ -2410,4 +2424,116 @@ body._lock {
 .masters__text {
   color: #000;
   padding: 0;
+}
+
+.master {
+  padding: 50px 0;
+}
+
+.master__body {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.master__image {
+  overflow: hidden;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin-bottom: 12px;
+}
+
+.master__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 425px) {
+  .master__image {
+    height: auto;
+    width: 100%;
+    padding: 0px 0px 100% 0px;
+  }
+}
+
+.master__btn {
+  width: 250px;
+  margin-bottom: 36px;
+}
+
+@media (max-width: 425px) {
+  .master__btn {
+    width: 100%;
+  }
+}
+
+.master__info {
+  padding-left: 100px;
+  line-height: 150%;
+}
+
+@media (max-width: 767px) {
+  .master__info {
+    padding-left: 0;
+  }
+}
+
+.master__name {
+  margin-bottom: 24px;
+  color: var(--purple);
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .master__name {
+    font-size: 26px;
+  }
+}
+
+.master__short-description {
+  font-weight: 600;
+  margin-bottom: 24px;
+  font-size: 20px;
+}
+
+.master__list {
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.master__list li {
+  background: url("../img/universe.svg") top left/50px auto no-repeat;
+  padding-left: 70px;
+  min-height: 50px;
+}
+
+.master__list li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+@media (max-width: 425px) {
+  .master__list li {
+    background: url("../img/universe.svg") top left/30px auto no-repeat;
+    padding-left: 40px;
+    min-height: 30px;
+  }
+}
+
+.master__about {
+  font-size: 20px;
+}
+
+.master__about h3 {
+  margin-bottom: 12px;
+}
+
+.master__about p:not(:last-child) {
+  margin-bottom: 12px;
 }

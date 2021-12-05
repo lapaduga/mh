@@ -1,0 +1,92 @@
+.master {
+	padding: 50px 0;
+
+	&__body {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	&__image {
+		overflow: hidden;
+		position: relative;
+		width: 250px;
+		height: 250px;
+		margin-bottom: 12px;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			height: 100%;
+			width: 100%;
+		}
+		@media (max-width:425px) {
+			height: auto;
+			width: 100%;
+			padding: 0px 0px 100% 0px;
+		}
+	}
+
+	&__btn{
+		width: 250px;
+		margin-bottom: 36px;
+		@media (max-width:425px) {
+			width: 100%;
+		}
+	}
+
+	&__info{
+		padding-left: 100px;
+		line-height: 150%;
+		@media (max-width:767px) {
+			padding-left: 0;
+		}
+	}
+
+	&__name {
+		margin-bottom: 24px;
+    color: var(--purple);
+    font-size: 32px;
+    font-weight: 900;
+		text-transform: uppercase;
+		@media (max-width:767px) {
+			font-size: 26px;
+		}
+	}
+
+	&__short-description {
+		font-weight: 600;
+		margin-bottom: 24px;
+		font-size: 20px;
+	}
+
+	&__list {
+		font-size: 20px;
+		margin-bottom: 24px;
+		li{
+			background: url('../img/universe.svg') top left / 50px auto no-repeat;
+			padding-left: 70px;
+			min-height: 50px;
+			&:not(:last-child){
+				margin-bottom: 12px;
+			}
+			@media (max-width:425px) {
+				background: url('../img/universe.svg') top left / 30px auto no-repeat;
+				padding-left: 40px;
+				min-height: 30px;
+			}
+		}
+	}
+
+	&__about {
+		font-size: 20px;
+		h3{
+			margin-bottom: 12px;
+		}
+		p{
+			&:not(:last-child){
+				margin-bottom: 12px;
+			}
+		}
+	}
+}
