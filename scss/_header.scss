@@ -33,6 +33,8 @@
 		padding: 10px 20px;
 	}
 	&__body {
+		max-width: 1600px;
+		margin: 0 auto;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
