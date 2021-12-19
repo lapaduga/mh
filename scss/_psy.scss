@@ -1,0 +1,82 @@
+.psy {
+
+	&__body {
+		padding: 50px 0;
+	}
+
+	&__degree {
+		&:not(:last-child){
+			margin-bottom: 40px;
+		}
+	}
+
+	&__description {
+		font-size: 26px;
+		line-height: 130%;
+		margin-bottom: 30px;
+		@media (max-width:500px) {
+			font-size: 22px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+	}
+
+	&__item {
+		flex: 0 0 33.333%;
+		padding: 15px 10px;
+		@media (max-width:767px) {
+			flex: 0 0 50%;
+		}
+		@media (max-width:500px) {
+			flex: 0 0 100%;
+		}
+	}
+
+	&__image {
+		overflow: hidden;
+		position: relative;
+		padding: 0 0 70% 0;
+		margin-bottom: 10px;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			height: 100%;
+			width: 100%;
+			transition: transform 0.5s ease 0s;
+			transform: scale3d(1,1,1);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				img{
+					transform: scale3d(1.03,1.03,1.03);
+				}
+			}
+		}
+	}
+
+	&__caption {
+		font-size: 20px;
+		line-height: 130%;
+		font-weight: 600;
+		color: var(--purple);
+		margin-bottom: 10px;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--gold);
+			}
+		}
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 150%;
+		color: #000;
+	}
+}

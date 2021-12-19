@@ -288,43 +288,35 @@ document.addEventListener('DOMContentLoaded', () => {
 	// popup
 	const body = document.querySelector('body');
 	const lockPadding = document.querySelectorAll('.lock-padding');
+	const popupCloseIcon = document.querySelectorAll('.close-popup');
 
 	let unlock = true;
 
 	const timeout = 500;
 
 	body.addEventListener("click", (e) => {
-		let targetItem = e.target.closest('.popup-link');
-		if (targetItem) {
-			let popupTitle = document.querySelector('.popup__heading');
-			let popupIframe = document.querySelector('.popup__video iframe');
-			let playItemTitle = targetItem.querySelector('.video-item__text');
-			let playItemURL = targetItem.dataset.url;
-			popupTitle.innerText = playItemTitle.innerText;
-			popupIframe.setAttribute('src', playItemURL);
-			const popupName = targetItem.getAttribute('href').replace('#', '');
+		let targetItem = e.target;
+		if (targetItem.closest('.popup-link')) {
+			if (targetItem.closest('.popup-link').classList.contains('video-item__link')) {
+				let popupTitle = document.querySelector('.popup__heading');
+				let popupIframe = document.querySelector('.popup__video iframe');
+				let playItemTitle = targetItem.closest('.popup-link').querySelector('.video-item__text');
+				let playItemURL = targetItem.closest('.popup-link').dataset.url;
+				popupTitle.innerText = playItemTitle.innerText;
+				popupIframe.setAttribute('src', playItemURL);
+			}
+			const popupName = targetItem.closest('.popup-link').getAttribute('href').replace('#', '');
 			const currentPopup = document.getElementById(popupName);
 			popupOpen(currentPopup);
 			e.preventDefault();
 		}
-	});
-
-	const popupCloseIcon = document.querySelectorAll('.close-popup');
-
-	if (popupCloseIcon.length > 0) {
-		for (let index = 0; index < popupCloseIcon.length; index++) {
-			const el = popupCloseIcon[index];
-			el.addEventListener('click', function (e) {
-				if (burger.classList.contains('_active')) {
-					burger.classList.remove('_active');
-					menu.classList.remove('_active');
-					document.body.classList.remove('_lock');
-				}
-				popupClose(el.closest('.popup'));
-				e.preventDefault();
+		if (targetItem.closest('.close-popup')) {
+			targetItem.addEventListener('click', function (e) {
+				popupClose(targetItem.closest('.popup'));
 			});
+			e.preventDefault();
 		}
-	}
+	});
 
 	function popupOpen(currentPopup) {
 		if (currentPopup && unlock) {
