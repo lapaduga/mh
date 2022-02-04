@@ -2676,6 +2676,7 @@ body._lock {
 
 .video-item__text {
   font-weight: 900;
+  text-transform: uppercase;
   color: var(--blue);
   line-height: 130%;
   font-size: 20px;
