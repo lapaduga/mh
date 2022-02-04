@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// popup
 	const body = document.querySelector('body');
 	const lockPadding = document.querySelectorAll('.lock-padding');
-	const popupCloseIcon = document.querySelectorAll('.close-popup');
+	const popupCloseIcons = document.querySelectorAll('.close-popup');
 
 	let unlock = true;
 
@@ -310,13 +310,17 @@ document.addEventListener('DOMContentLoaded', () => {
 			popupOpen(currentPopup);
 			e.preventDefault();
 		}
-		if (targetItem.closest('.close-popup')) {
-			targetItem.addEventListener('click', function (e) {
-				popupClose(targetItem.closest('.popup'));
-			});
-			e.preventDefault();
-		}
 	});
+
+	if (popupCloseIcons) {
+		for (let i = 0; i < popupCloseIcons.length; i++) {
+			const icon = popupCloseIcons[i];
+			icon.addEventListener('click', function (e) {
+				e.preventDefault();
+				popupClose(icon.closest('.popup'));
+			});
+		}
+	}
 
 	function popupOpen(currentPopup) {
 		if (currentPopup && unlock) {
