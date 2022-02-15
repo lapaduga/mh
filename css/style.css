@@ -324,9 +324,29 @@ body._lock {
   padding: 50px 0px;
 }
 
+.text strong {
+  color: var(--purple);
+}
+
+.text p {
+  margin-bottom: 10px;
+}
+
+.text h6 {
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 767px) {
   .text {
     padding: 20px 0 50px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .text h6, .text ul {
+    text-align: left;
   }
 }
 
@@ -1496,6 +1516,11 @@ body._lock {
   text-align: right;
   margin: 0 0 40px auto;
   max-width: 600px;
+}
+
+.common__mission {
+  display: block;
+  margin-bottom: 50px;
 }
 
 .common .video {

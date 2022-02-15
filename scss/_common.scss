@@ -17,6 +17,11 @@
 		max-width: 600px;
 	}
 
+	&__mission{
+		display: block;
+		margin-bottom: 50px;
+	}
+
 	.video{
 		padding: 0 0 60% 0;
 		@media (max-width:767px) {

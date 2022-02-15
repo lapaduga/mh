@@ -130,8 +130,24 @@ body {
 	line-height: 27px;
 	font-weight: 300;
 	padding: 50px 0px;
+	strong{
+		color: var(--purple);
+	}
+	p{
+		margin-bottom: 10px;
+	}
+	h6{
+		font-weight: 400;
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
 	@media (max-width: 767px) {
 		padding: 20px 0 50px 0;
+	}
+	@media (max-width:600px) {
+		h6, ul{
+			text-align: left;
+		}
 	}
 }
 .btn {
