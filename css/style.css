@@ -1076,6 +1076,7 @@ body._lock {
 
 .block.block--no-top-padding .subtitle,
 .block.block--no-top-padding .text {
+  max-width: 100%;
   text-align: center;
 }
 
