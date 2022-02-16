@@ -16,6 +16,9 @@
 			font-weight: 400;
 		}
 	}
+	&.block--no-top-padding{
+		padding-top: 0;
+	}
 	@media (max-width:767px) {
 		padding: 50px 0;
 	}

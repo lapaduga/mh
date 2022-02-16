@@ -413,4 +413,19 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	})();
 	//#endregion
+
+	//#region Слайдер творчества учеников
+	new Swiper('.slider', {
+		keyboard: {
+			enabled: true,
+			onlyInViewport: true,
+			pageUpDown: true
+		},
+		mousewheel: {
+			sensitivity: 1,
+			eventsTarget: '.slider'
+		},
+		effect: 'cards'
+	});
+	//#endregion
 });

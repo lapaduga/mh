@@ -1070,6 +1070,10 @@ body._lock {
   font-weight: 400;
 }
 
+.block.block--no-top-padding {
+  padding-top: 0;
+}
+
 @media (max-width: 767px) {
   .block {
     padding: 50px 0;
@@ -3018,6 +3022,38 @@ body._lock {
 }
 
 .testimonials__link img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.geo {
+  text-align: center;
+}
+
+.geo__image img {
+  max-width: 100%;
+}
+
+.slider {
+  width: 500px;
+}
+
+.slider__image {
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  padding: 0 0 100% 0;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.slider__image img {
   position: absolute;
   top: 0;
   left: 0;
