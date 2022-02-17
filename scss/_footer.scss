@@ -1,7 +1,7 @@
 .footer {
 	padding: 100px 0;
 	background-image: radial-gradient(circle, #5928e5 0%, var(--blue));
-	@media (max-width:767px) {
+	@media (max-width: 767px) {
 		padding: 50px 0;
 	}
 
@@ -46,12 +46,6 @@
 		}
 	}
 
-	&__sub-list {
-	}
-
-	&__sub-item {
-	}
-
 	&__link {
 		color: #fff;
 		position: relative;
@@ -64,6 +58,13 @@
 		&:before {
 			margin-right: 10px;
 			font-size: 30px;
+			transition: opacity 0.5s ease 0s;
+		}
+		img {
+			width: 30px;
+			display: inline-block;
+			margin-right: 10px;
+			transition: opacity 0.5s ease 0s;
 		}
 		span {
 			padding-bottom: 5px;
@@ -84,8 +85,13 @@
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				color: var(--gold);
 				border-color: var(--gold);
+				&::before{
+					opacity: 0.5;
+				}
+				img{
+					opacity: 0.5;
+				}
 				span {
 					&:after {
 						transform: scaleX(1);
@@ -96,17 +102,13 @@
 		}
 	}
 
-	&__bottom {
-
-	}
-
 	&__socials {
 		margin-bottom: 30px;
 		.footer__sub-list {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
 			gap: 20px;
-			@media (max-width:767px) {
+			@media (max-width: 767px) {
 				gap: 10px;
 			}
 		}

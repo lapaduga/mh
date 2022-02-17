@@ -345,7 +345,8 @@ body._lock {
 }
 
 @media (max-width: 600px) {
-  .text h6, .text ul {
+  .text h6,
+  .text ul {
     text-align: left;
   }
 }
@@ -541,6 +542,53 @@ body._lock {
 @media (max-width: 1024px) {
   .cursor-part {
     display: none !important;
+  }
+}
+
+.socials {
+  padding: 40px 0 0 0;
+}
+
+.socials__title {
+  color: var(--purple);
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.socials__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -5px;
+}
+
+.socials__item {
+  padding: 0 5px;
+}
+
+.socials__link {
+  display: inline-block;
+  width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+
+.socials__link img {
+  max-width: 100%;
+}
+
+@media (any-hover: hover) {
+  .socials__link:hover {
+    opacity: 0.5;
   }
 }
 
@@ -1052,6 +1100,12 @@ body._lock {
   background-image: radial-gradient(circle, #5928e5 0%, var(--blue));
 }
 
+@media (max-width: 767px) {
+  .block.block--activities {
+    padding-top: 70px;
+  }
+}
+
 .block.block--form {
   background: var(--pink);
 }
@@ -1534,7 +1588,7 @@ body._lock {
 }
 
 .common .video {
-  padding: 0 0 60% 0;
+  padding: 0 0 55% 0;
 }
 
 @media (max-width: 767px) {
@@ -1633,6 +1687,16 @@ body._lock {
 .footer__link:before {
   margin-right: 10px;
   font-size: 30px;
+  -webkit-transition: opacity 0.5s ease 0s;
+  transition: opacity 0.5s ease 0s;
+}
+
+.footer__link img {
+  width: 30px;
+  display: inline-block;
+  margin-right: 10px;
+  -webkit-transition: opacity 0.5s ease 0s;
+  transition: opacity 0.5s ease 0s;
 }
 
 .footer__link span {
@@ -1661,8 +1725,13 @@ body._lock {
 
 @media (any-hover: hover) {
   .footer__link:hover {
-    color: var(--gold);
     border-color: var(--gold);
+  }
+  .footer__link:hover::before {
+    opacity: 0.5;
+  }
+  .footer__link:hover img {
+    opacity: 0.5;
   }
   .footer__link:hover span:after {
     -webkit-transform: scaleX(1);
@@ -3037,8 +3106,18 @@ body._lock {
   width: 100%;
 }
 
+.testimonials__comment {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.testimonials__comment a {
+  font-size: 26px;
+}
+
 .geo {
   text-align: center;
+  padding-top: 50px;
 }
 
 .geo__image img {
