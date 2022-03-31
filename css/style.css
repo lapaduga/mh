@@ -435,6 +435,174 @@ body._lock {
   }
 }
 
+.content h1 {
+  font-weight: 300;
+  font-size: 50px;
+  padding: 20px 0;
+}
+
+@media (max-width: 992px) {
+  .content h1 {
+    font-size: 40px;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .content h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 425px) {
+  .content h1 {
+    font-size: 32px;
+  }
+}
+
+.content h2 {
+  font-weight: 300;
+  font-size: 48px;
+  padding: 20px 0;
+}
+
+@media (max-width: 992px) {
+  .content h2 {
+    font-size: 38px;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .content h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 425px) {
+  .content h2 {
+    font-size: 30px;
+  }
+}
+
+.content h3 {
+  font-weight: 300;
+  font-size: 46px;
+  padding: 20px 0;
+}
+
+@media (max-width: 992px) {
+  .content h3 {
+    font-size: 36px;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .content h3 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 425px) {
+  .content h3 {
+    font-size: 28px;
+  }
+}
+
+.content h4 {
+  font-weight: 300;
+  font-size: 44px;
+  padding: 20px 0;
+}
+
+@media (max-width: 992px) {
+  .content h4 {
+    font-size: 34px;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .content h4 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .content h4 {
+    font-size: 26px;
+  }
+}
+
+.content h5 {
+  font-weight: 300;
+  font-size: 42px;
+  padding: 20px 0;
+}
+
+@media (max-width: 992px) {
+  .content h5 {
+    font-size: 32px;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .content h5 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 425px) {
+  .content h5 {
+    font-size: 24px;
+  }
+}
+
+.content h6 {
+  font-weight: 300;
+  font-size: 40px;
+  padding: 20px 0;
+}
+
+@media (max-width: 992px) {
+  .content h6 {
+    font-size: 30px;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .content h6 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 425px) {
+  .content h6 {
+    font-size: 22px;
+  }
+}
+
+.content p {
+  font-size: 20px;
+  padding: 5px 0;
+  line-height: 130%;
+}
+
+.content ul li {
+  font-size: 20px;
+  padding: 5px 0;
+  line-height: 130%;
+}
+
+.content img {
+  padding: 20px 0;
+  max-width: 100%;
+  display: inline-block;
+}
+
 .socials {
   padding: 40px 0 0 0;
 }
@@ -3063,4 +3231,8 @@ body._lock {
   .slider__image {
     padding: 0 0 150% 0;
   }
+}
+
+.article__body {
+  padding: 50px 0;
 }
