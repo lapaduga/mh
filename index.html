@@ -11,7 +11,7 @@
 		rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="css/style.css">
 	<title>Школа ментального здоровья "Mental Healing"</title>
 </head>
@@ -31,13 +31,19 @@
 								<span class="menu__arrow"></span>
 								<ul class="menu__sub-list">
 									<li>
+										<a href="#leaders" class="menu__sub-link">Ведущие специалисты</a>
+									</li>
+									<li>
 										<a href="#about" class="menu__sub-link">Миссия</a>
+									</li>
+									<li>
+										<a href="#activities" class="menu__sub-link">Все курсы</a>
 									</li>
 									<li>
 										<a href="#geo" class="menu__sub-link">География</a>
 									</li>
 									<li>
-										<a href="#activities" class="menu__sub-link">Направления деятельности</a>
+										<a href="#conditions" class="menu__sub-link">Условия обучения</a>
 									</li>
 								</ul>
 							</li>
@@ -102,23 +108,36 @@
 							Школа самоисцеления "Mental Healing"
 						</h1>
 						<a href="#request" class="mainscreen__btn btn btn--white">Начать обучение</a>
-						<div class="mainscreen__image">
-							<img src="img/logo.webp" alt="">
+						<div class="mainscreen__video video">
+							<a href="https://www.youtube.com/watch?v=3Pxv6ZKVOpo" data-fancybox="gallery">
+								<img src="img/logo.webp" alt="">
+							</a>
+							<div class="video__cover"></div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="block block--first">
+			<section class="block block--first" id="leaders">
 				<div class="block__container container">
 					<div class="block__body">
 						<h2 class="block__subtitle subtitle">
-							Далеко-далеко за словесными горами в стране гласных и согласных живут.
+							Илья Александров
 						</h2>
 						<div class="block__text text">
 							<p>
-								Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
-								Предложения, единственное повстречался свой необходимыми оксмокс вопроса домах
-								заманивший мир знаках агентство по всей своих но снова инициал все силуэт рукописи.
+								Практикующий психолог (эмпатийное консультирование), регрессолог, универсальный контактер, проводник к ВЯ
+							</p>
+							<p>
+								Разработка реабилитационных программ, арт-терапии, авторских методик и тренингов.
+							</p>
+							<p>
+								Работа с зависимым и созависимым поведением.
+							</p>
+							<p>
+								Групповое и индивидуальное консультирование.Обо мне:
+							</p>
+							<p>
+								Организатор проекта «Прими Себя» для подростков.В 2019 году оказал психологическую поддержку более 250 пациентам, страдающим алкогольной, игровой и наркотической зависимостью. Опыт работы - более 5 лет.Прошел обучение у Ирины Подзоровой по сонастройке с Высшим Я.Помощь людям по растворению блоков , которые мешают умению расслабляться и осознанно слышать Высшее Я.Консультирование и тестирование на аппаратах ауробук и кроуноскоп в Международном центре духовного развития «Кассиопея».
 							</p>
 						</div>
 						<div class="block__media">
@@ -220,9 +239,6 @@
 									<h4 class="activities__caption caption">
 										Школа самоисцеления
 									</h4>
-									<div class="activities__payment">
-										Оплата по сердцу
-									</div>
 									<div class="activities__text text">
 										Здесь в открытом доступе можно прослушать тематические вебинары, пройти медитации и получить ответы
 										на интересующие вопросы
@@ -231,25 +247,19 @@
 								</li>
 								<li class="activities__item">
 									<h4 class="activities__caption caption">
-										Обучение психологии
+										Обучающие курсы
 									</h4>
-									<div class="activities__payment">
-										Оплата по сердцу
-									</div>
 									<div class="activities__text text">
-										Информация о курсе "Развитие навыков психологической помощи"
+										У нас можно обучаться онлайн и оффлайн
 									</div>
 									<a href="psychology.html" class="activities__btn btn btn--pink">Подробнее</a>
 								</li>
 								<li class="activities__item">
 									<h4 class="activities__caption caption">
-										Мастера
+										Обучение мастеров школы
 									</h4>
-									<div class="activities__payment">
-										Оплата по сердцу
-									</div>
 									<div class="activities__text text">
-										Информация о сертифицированных специалистах Школы
+										Здесь можно получить навыки психологической помощи
 									</div>
 									<a href="masters.html" class="activities__btn btn btn--pink">Подробнее</a>
 								</li>
@@ -264,7 +274,9 @@
 						<div class="block__geo geo">
 							<div class="geo__subtitle subtitle">География участников проекта Mental Healing</div>
 							<div class="geo__text text">
-								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, soluta vel nemo tempora dolores cum blanditiis cumque illo aut iure explicabo ullam, ducimus quisquam qui provident nesciunt minus voluptatem officiis! Nulla ipsa aliquam explicabo culpa, iure eveniet minima consectetur repellendus expedita voluptas praesentium voluptate, fugit corrupti sint obcaecati facilis ab fuga tempore sapiente distinctio. Eius odio sapiente hic magni, nihil expedita eveniet, voluptatibus laboriosam tempore reprehenderit autem rerum culpa minus atque! Minus cum sunt quis beatae ipsum, ipsa soluta harum asperiores delectus! Odit, quo? Delectus, molestiae ullam quos ratione assumenda dolor obcaecati illum enim vitae temporibus architecto saepe animi placeat.
+								География участников и слушателей значительно расширила свое влияние. Более 1000 человек из 23 стран по
+								всему миру уже прикоснулись к практикам осознанности, освоили базовые навыки психологической помощи и
+								продолжают повышать уровень своего духовного развития.
 							</div>
 							<div class="geo__image">
 								<img src="img/map.webp" alt="">
@@ -280,7 +292,8 @@
 							ТВОРЧЕСТВО УЧЕНИКОВ
 						</div>
 						<div class="block__text text">
-							После прохождения занятий у учеников Школы активируются творческие способности. Все творческие наработки мы регулярно публикуем в социальных сетях в рубрике «АРТ-СТУДИЯ В ПОТОКЕ»
+							После прохождения занятий у учеников Школы активируются творческие способности. Все творческие наработки
+							мы регулярно публикуем в социальных сетях в рубрике «АРТ-СТУДИЯ В ПОТОКЕ»
 						</div>
 						<div class="block__slider slider swiper">
 							<div class="slider__wrapper swiper-wrapper">
@@ -382,6 +395,32 @@
 										</a>
 									</div>
 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="block" id="conditions">
+				<div class="block__container container">
+					<div class="block__body">
+						<div class="block__conditions">
+							<div class="conditions__subtitle subtitle">Условия обучения</div>
+							<div class="conditions__text text">
+								В Школе MENTAL HEALING при прохождении офлайн курса, участнику необходимо приехать в Воронеж, в
+								Международный центр духовного развития «Кассиопея».
+								Чтобы получить доступ к онлай-курсу, участник заполняет регистрационную форму, указанную в
+								соответствующем разделе интересующего курса и отправляет оплату. Размер оплаты не имеет фиксированной
+								стоимости, он зависит от финансовых возможностей каждого участника в отдельности. Напоминаем, что наша
+								Школа является дочерним направлением проекта Международный центр духовного развития «Кассиопея», поэтому
+								мы придерживаемся такого же принципа дара по сердцу за все обучающие курсы, как и в самом центре.
+								После оплаты первого урока администратор указанного курса добавляет участника в тематический общий чат в
+								Телеграм. В чате админ размещает ссылку на первое видео, тем самым, открывая доступ для изучения
+								материала. Обратную связь от мастеров курса по просмотренному уроку можно получать на факультативных
+								занятиях, которые будут проходить в Zoom, согласно расписанию. Ссылка на вход в Zoom всегда размещается
+								за час до встречи в чате того курса, по которому участник решил проходить обучение. Таким образом,
+								участнику последовательно будет предоставлен доступ ко всем запланированным видео-урокам.
+								Продолжительность урока – от 30 до 60 минут каждый Видео размещено на образовательной платформе
+								«MEMBERLUX». Как пользоваться платформой:
 							</div>
 						</div>
 					</div>
