@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Анимация бургера
 	const burger = document.querySelector('.header__burger');
+	const menu = document.querySelector('.menu__body');
 
 	if (burger) {
-		const menu = document.querySelector('.menu__body');
 
 		burger.addEventListener('click', () => {
 			burger.classList.toggle('_active');
@@ -24,6 +24,25 @@ document.addEventListener('DOMContentLoaded', () => {
 			document.body.classList.toggle('_lock');
 		});
 	}
+
+	// Закрытие меню по клику на ссылку
+	const menuLinks = document.querySelectorAll('.menu__link');
+	menuLinks.forEach(link => {
+		link.addEventListener('click', () => {
+			burger.classList.remove('_active');
+			menu.classList.remove('_active');
+			document.body.classList.remove('_lock');
+		});
+	});
+
+	const menuSubLinks = document.querySelectorAll('.menu__sub-link');
+	menuSubLinks.forEach(link => {
+		link.addEventListener('click', () => {
+			burger.classList.remove('_active');
+			menu.classList.remove('_active');
+			document.body.classList.remove('_lock');
+		});
+	});
 
 	// Плавающая шапка
 	let lastScroll = 0;

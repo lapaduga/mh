@@ -137,6 +137,11 @@ body {
 		font-size: 24px;
 		margin-bottom: 10px;
 	}
+	ul {
+		li {
+			margin-bottom: 10px;
+		}
+	}
 	@media (max-width: 767px) {
 		padding: 20px 0 50px 0;
 	}

@@ -328,6 +328,10 @@ body._lock {
   margin-bottom: 10px;
 }
 
+.text ul li {
+  margin-bottom: 10px;
+}
+
 @media (max-width: 767px) {
   .text {
     padding: 20px 0 50px 0;
